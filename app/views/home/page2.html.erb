@@ -1,0 +1,23 @@
+<h1>Bootstrap starter template</h1>
+<div style="width:700px; margin: 50px auto;" class="border p-3">
+  <h3>Executing......</h3>
+
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped active" role="progressbar"
+  aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+      40%
+    </div>  
+  </div>
+<pre data-source=" <%= ('/log/development.log') %>"></pre>
+</div>
+<script>
+
+$( document ).ready(function() {
+  $.ajax({
+    url: $("pre").data("source"),
+    context: document.body
+  }).done (function( response ) {
+    $("pre").html(response)
+  });
+});
+</script>

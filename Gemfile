@@ -35,9 +35,11 @@ gem 'jbuilder', '~> 2.5'
 #Adding bootstrap
 gem 'bootstrap'
 gem 'jquery-rails'
-
+gem "font-awesome-rails"
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+# Gem for export excel or csv
+gem 'roo', '~> 2.7', '>= 2.7.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
